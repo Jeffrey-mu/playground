@@ -59,7 +59,7 @@ const IDS = ['Driver1', 'Driver2', 'Driver3', 'Driver4', 'Driver5']
   </a>
 
   <div id="some-element" p-x50 flex="~ ">
-    <div v-for="id in IDS" :id="id" :key="id" ma w-20 h-20 border />
+    <span v-for="id in IDS" :id="id" :key="id" ma w-20 h-20 border />
   </div>
 </template>
 

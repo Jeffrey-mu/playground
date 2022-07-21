@@ -12,10 +12,10 @@ const packages = ref((useRouter().getRoutes()).filter(router => router.path.star
 
 <template>
   <nav flex="~ justify-between" mb-6 bg-black px-5 py-3 c-white>
-    <div c-green>
+    <div c-green mr-10>
       playground
     </div>
-    <div flex-1>
+    <div flex="~ 1 justify-start">
       <RouterLink v-for="router, index in packages" :key="index" :to="router.path" hover="c-yellow">
         {{ router.meta.name }}
       </RouterLink>
