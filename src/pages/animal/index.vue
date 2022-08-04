@@ -13,6 +13,7 @@ const [option, reload] = useDog({
       @reload="reload"
     />
     <HttpCat
+      title="HttpCat"
       path="https://http.cat/100" :open="true"
     />
   </div>
@@ -20,6 +21,6 @@ const [option, reload] = useDog({
 
 <route lang="yaml">
 meta:
-layout: home
-name: 动物
+  layout: home
+  name: 动物
 </route>
