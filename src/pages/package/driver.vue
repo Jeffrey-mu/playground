@@ -3,7 +3,7 @@ import Driver from 'driver.js'
 import 'driver.js/dist/driver.min.css'
 const driver = new Driver()
 
-onMounted(() => {
+const start = () => {
   driver.defineSteps([
     {
       element: '#Driver1',
@@ -19,7 +19,7 @@ onMounted(() => {
       popover: {
         title: 'Title on Popover',
         description: 'Body of the popover',
-        position: 'top',
+        position: 'left',
       },
     },
     {
@@ -43,20 +43,19 @@ onMounted(() => {
       popover: {
         title: 'Title on Popover',
         description: 'Body of the popover',
-        position: 'right',
+        position: 'left',
       },
     },
   ])
   driver.start()
-})
-const start = driver.start
+}
 const IDS = ['Driver1', 'Driver2', 'Driver3', 'Driver4', 'Driver5']
 </script>
 
 <template>
-  <a href="/package/driver">
-    Reset
-  </a>
+  <button @click.stop="start" border px-2 ma-2>
+    start
+  </button>
 
   <div id="some-element" p-x50 flex="~ ">
     <span v-for="id in IDS" :id="id" :key="id" ma w-20 h-20 border />
