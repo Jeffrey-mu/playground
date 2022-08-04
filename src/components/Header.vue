@@ -6,8 +6,13 @@ const toggleLocales = () => {
   const locales = availableLocales
   locale.value = locales[(locales.indexOf(locale.value) + 1) % locales.length]
 }
-
-const packages = ref((useRouter().getRoutes()))
+const HIDE_PATH = ['HttpCats']
+const routerPath = computed(() => {
+  return useRouter().getRoutes().filter(el => el.name && !HIDE_PATH.includes((el as any).meta.name))
+})
+const active = computed(() => {
+  return useRoute().path
+})
 </script>
 
 <template>
@@ -18,8 +23,8 @@ const packages = ref((useRouter().getRoutes()))
       </RouterLink>
     </div>
     <div flex="~ 1 justify-start">
-      <RouterLink v-for="router, index in packages" :key="index" ml-2 :to="router.path" hover="c-yellow">
-        {{ router.meta.name }}
+      <RouterLink v-for="route, index in routerPath" :key="index" ml-2 :to="route.path" hover="c-yellow" :class="{ 'c-yellow': active === route.path }">
+        {{ route.meta.name }}
       </RouterLink>
     </div>
     <div>
