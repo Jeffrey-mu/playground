@@ -40,7 +40,7 @@ const active = computed(() => {
         <div i-carbon-dicom-overlay />
       </RouterLink>
 
-      <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/Jeffrey-mu/vitesse" target="_blank" title="GitHub">
+      <a class="icon-btn mx-2" rel="noreferrer" href="https://github.com/Jeffrey-mu/playground" target="_blank" title="GitHub">
         <div i-carbon-logo-github />
       </a>
     </div>
