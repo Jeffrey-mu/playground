@@ -2,8 +2,8 @@
 </script>
 
 <template>
-  <h1>
-    welcome my website
+  <h1 text="20 center">
+    welcome my website ⭐️
   </h1>
 </template>
 
