@@ -8,8 +8,8 @@ declare global {
   const $ref: typeof import('vue/macros')['$ref']
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
-  const CAT_PATH: typeof import('./composables/Animal')['CAT_PATH']
-  const DOG_PATH: typeof import('./composables/Animal')['DOG_PATH']
+  const CAT_PATH: typeof import('./composables/animal')['CAT_PATH']
+  const DOG_PATH: typeof import('./composables/animal')['DOG_PATH']
   const EffectScope: typeof import('vue')['EffectScope']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
@@ -274,8 +274,8 @@ declare module '@vue/runtime-core' {
     readonly $ref: UnwrapRef<typeof import('vue/macros')['$ref']>
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
-    readonly CAT_PATH: UnwrapRef<typeof import('./composables/Animal')['CAT_PATH']>
-    readonly DOG_PATH: UnwrapRef<typeof import('./composables/Animal')['DOG_PATH']>
+    readonly CAT_PATH: UnwrapRef<typeof import('./composables/animal')['CAT_PATH']>
+    readonly DOG_PATH: UnwrapRef<typeof import('./composables/animal')['DOG_PATH']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>

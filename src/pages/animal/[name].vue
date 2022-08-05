@@ -1,16 +1,17 @@
 <script setup lang="ts">
-import { CAT_PATH, DOG_PATH } from '~/composables/Animal'
+import { CAT_PATH, DOG_PATH } from '~/composables/animal'
+import { Animal as A } from '~/enum/animal'
 const props = defineProps<{ name: string }>()
 const isWhatAnimal = computed(() => {
   if (props.name === 'HttpDogs')
     return 'dog/static/img/medium'
-  return 'cat'
+  return A.CAT
 })
 const suffix = computed(() => {
-  return isWhatAnimal.value === 'cat' ? '' : '.jpg'
+  return isWhatAnimal.value === A.CAT ? '' : '.jpg'
 })
 const PATHS = computed(() => {
-  return isWhatAnimal.value === 'cat' ? CAT_PATH : DOG_PATH
+  return isWhatAnimal.value === A.CAT ? CAT_PATH : DOG_PATH
 })
 </script>
 
@@ -23,7 +24,7 @@ const PATHS = computed(() => {
     <div flex="~ wrap">
       <HttpAnimal
         v-for="item in PATHS"
-        :key="item" :path="`https://http.${isWhatAnimal}${item}${suffix}`" :open="false"
+        :key="item" :path="`${A.ANIMAL_PATH_PREFIX}${isWhatAnimal}${item}${suffix}`" :open="false"
       />
     </div>
   </div>
