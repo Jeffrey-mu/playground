@@ -19,7 +19,7 @@ const active = computed(() => {
   <nav flex="~ justify-between" mb-2 bg-black px-5 py-3 c-white>
     <div c-gray mr-10>
       <RouterLink text-left class="icon-btn mx-2" to="/" :title="t('button.home')">
-        <div i-carbon-campsite />
+        PlayGround
       </RouterLink>
     </div>
     <div flex="~ 1 justify-start">
