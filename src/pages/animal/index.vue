@@ -2,9 +2,15 @@
 import { useDog } from '~/hooks/animal'
 import { Animal as A } from '~/enum/animal'
 import { CAT_PATH as PATHS } from '~/composables/animal'
-const [option, reload] = useDog({
+const [option, methods] = useDog({
   title: '互联网上最大的开源狗图片集合!',
   url: 'https://dog.ceo/api/breeds/image/random',
+  showDetails: false,
+})
+const [optionTwo, methodsTwo] = useDog({
+  title: '开源动物数据集合!',
+  url: 'https://zoo-animal-api.herokuapp.com/animals/rand',
+  showDetails: true,
 })
 const PREFIX = A.ANIMAL_PATH_PREFIX
 const isOpen = {
@@ -28,7 +34,11 @@ const ANIMALS = [
   <div flex="~ wrap">
     <Animal
       :option="option"
-      @reload="reload"
+      v-on="methods"
+    />
+    <Animal
+      :option="optionTwo"
+      v-on="methodsTwo"
     />
     <HttpAnimal
       v-for="item in ANIMALS"

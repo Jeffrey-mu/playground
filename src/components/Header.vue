@@ -16,7 +16,7 @@ const active = computed(() => {
 </script>
 
 <template>
-  <nav flex="~ justify-between" mb-2 bg-black px-5 py-3 c-white>
+  <nav flex="~ justify-between" mb-2 bg-black px-5 py-3 c-white z-2>
     <div c-gray mr-10>
       <RouterLink text-left class="icon-btn mx-2" to="/" :title="t('button.home')">
         PlayGround
