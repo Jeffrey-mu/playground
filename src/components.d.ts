@@ -12,9 +12,9 @@ declare module '@vue/runtime-core' {
     Counter: typeof import('./components/Counter.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     HttpAnimal: typeof import('./components/HttpAnimal.vue')['default']
-    HttpCat: typeof import('./components/HttpCat.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Testcon: typeof import('./components/Testcon.vue')['default']
   }
 }

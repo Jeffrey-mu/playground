@@ -1,13 +1,15 @@
 <script setup lang="ts">
+
 </script>
 
 <template>
-  <h1 text="20 center">
-    welcome my website ⭐️
-  </h1>
+<div flex>
+  <img ma src="https://source.unsplash.com/random" w-80>
+  <img ma src="https://source.unsplash.com/random" w-150 mx-2 max-h="90vh">
+  <img ma src="https://source.unsplash.com/random" w-80>
+</div>
 </template>
-
 <route lang="yaml">
 meta:
-  layout: home
+  layout: default
 </route>
