@@ -23,7 +23,7 @@ const active = computed(() => {
       </RouterLink>
     </div>
     <div flex="~ 1 justify-start">
-      <RouterLink v-for="route, index in routerPath" :key="index" ml-2 :to="route.path" hover="c-yellow" :class="{ 'c-yellow': active === route.path }">
+      <RouterLink v-for="route, index in routerPath" :key="index" mr-4 :to="route.path" hover="c-yellow" :class="{ 'c-yellow': active === route.path }">
         {{ route.meta.name }}
       </RouterLink>
     </div>
