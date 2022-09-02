@@ -31,7 +31,7 @@ const ANIMALS = [
 </script>
 
 <template>
-  <div flex="~ wrap">
+  <div flex="~ wrap" justify-center>
     <Animal
       :option="option"
       v-on="methods"
